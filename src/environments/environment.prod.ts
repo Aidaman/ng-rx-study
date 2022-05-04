@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  authApiURL: `https://conduit.productionready.io/api/`,
+  limit: 10,
 };

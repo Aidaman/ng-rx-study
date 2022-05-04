@@ -1,0 +1,65 @@
+@import "src/app/colors";
+
+.article-preview{
+  *{
+    text-decoration: none;
+    transition: 250ms;
+  }
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  .article-meta{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .info{
+      display: flex;
+      flex-direction: column;
+      a{
+        color: $green;
+        &:hover{
+          color: $teal;
+        }
+      }
+
+      .date{
+        color: #bbb;
+        font-size: 12px;
+      }
+    }
+  }
+  .article-content{
+    *{
+      cursor: pointer;
+    }
+
+    margin-bottom: 15px;
+    &__header{
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: black;
+      margin: 0 0 3px;
+      padding-bottom: 0;
+      &:hover{
+        color: $green;
+      }
+    }
+    &__paragraph{
+      font-weight: 300;
+      font-size: 1rem;
+      color: #999;
+      margin-bottom: 15px;
+      &:hover{
+        color: darkgray;
+      }
+    }
+  }
+
+  img{
+    width: 32px;
+    height: 32px;
+  }
+}

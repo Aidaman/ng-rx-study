@@ -1,0 +1,27 @@
+@import "src/app/colors";
+
+.feed-toggle{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: #818a91 solid 1px;
+
+  .nav{
+    display: flex;
+    gap: 10px;
+
+    .link{
+      text-decoration: none;
+      color: #555;
+      &.active{
+        color: $green;
+        &::after{
+          content: '';
+          display: block;
+          background: $green;
+          height: 2px;
+        }
+      }
+
+    }
+  }
+}

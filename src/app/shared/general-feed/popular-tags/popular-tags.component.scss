@@ -1,0 +1,16 @@
+.sidebar{
+  padding: 5px 10px 10px;
+  background: #f3f3f3;
+  border-radius: 4px;
+  .tag-list__tag-default{
+    text-decoration: none;
+    color: white;
+    border: none;
+    &:hover {
+      color: white;
+    }
+  }
+  p{
+    color: #333;
+  }
+}

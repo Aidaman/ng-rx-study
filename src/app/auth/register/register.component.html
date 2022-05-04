@@ -1,0 +1,36 @@
+<!--<h2><====>{{isSubmitting$ | async}}<====></h2>-->
+<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col">
+        <div class="col-md-6 offset-md-3 col-xs-12">
+          <h1 class="text-sm-center">Sign Up</h1>
+          <p class="text-sm-center"><a [routerLink]="['/auth','login']">have an account?</a></p>
+          <!-- Backend errors are here -->
+
+          <mc-backend-error-messages *ngIf="backendErrors$ | async" [backendErrors]="backendErrors$ | async"></mc-backend-error-messages>
+
+          <form [formGroup]="form">
+            <div class="mb-2 form-group">
+              <input formControlName="username" type="text" placeholder="username" class="form-control form-control-lg">
+            </div>
+
+            <div class="mb-2 form-group">
+              <input formControlName="email" type="email" placeholder="email" class="form-control form-control-lg">
+            </div>
+
+            <div class="mb-2 form-group">
+              <input formControlName="password" type="password" placeholder="password" class="form-control form-control-lg">
+            </div>
+
+            <button [disabled]="form.invalid &&
+                          !form.dirty"
+                    class="btn btn-large btn-primary"
+                    type="submit"
+                    (click)="onSubmit()">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
